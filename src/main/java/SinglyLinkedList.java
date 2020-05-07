@@ -27,6 +27,15 @@ public class SinglyLinkedList<E> {
         if (isEmpty()) return null;
         return tail.getElement();
     }
+
+    public void addFirst(E e) {
+        head = new Node<>(e, head);
+        if (isEmpty()) {
+            tail = head;
+        }
+        size++;
+    }
+
     public void addLast(E e) {
         Node<E> newest = new Node<>(e, null);
         if (isEmpty()) {
